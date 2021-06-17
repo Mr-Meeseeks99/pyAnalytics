@@ -186,7 +186,7 @@ np3 = np.array([[1,4],[3,1],[5,6],[10,50]])
 np3
 np3.shape
 
-np3.reshape((-1,1))  #1 column from 2 column
+np3.reshape((8,1))  #1 column from 2 column
 
 #http://cs231n.github.io/python-numpy-tutorial/
 #%% #pandas - dataframe, excel like
@@ -199,6 +199,7 @@ dir(pd)
 
 df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
 df1
+df1.mutate(df1['m' = 'marks'*10])
 type(df1) 
 
 df1.columns  #columnanes
@@ -225,6 +226,9 @@ import seaborn as sns
 iris = sns.load_dataset("iris")
 iris.head()
 iris.tail()
+ln_sl = np.log(iris.sepal_length)
+ln_sl
+plt.hist(ln_sl)
 df1.groupby('gender').size()
 iris.groupby('species').size().plot(kind='bar')
 sns.pairplot(iris)  #relationship diagrams
