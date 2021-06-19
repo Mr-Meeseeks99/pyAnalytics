@@ -111,7 +111,7 @@ mtcarsDF[mtcarsDF.gear.eq(3)]  #chaining method
 mtcarsDF[mtcarsDF['gear'] == 3 & mtcarsDF['am']== 0]
 
 mtcarsDF.gear.unique()
-mtcarsDF.carb.unique()
+mtcarsDF.carb.nunique() #no. of distinct values
 
 gears=[4,5]
 mtcarsDF[mtcarsDF.gear.isin(gears)]
@@ -130,7 +130,7 @@ mtcarsDF.query('gear==4')
 #if a string
 mtcarsDF.query('gear=="4"')
 mtcarsDF.query('gear==4 & am==0')
-mtcarsDF.query('gear in [3,7]')
+mtcarsDF.query('gear in [3,5]')
 
 
 

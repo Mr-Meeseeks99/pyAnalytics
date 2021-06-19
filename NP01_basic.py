@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #scalar
-x0 = np.random.randint(10); x0
+x0 = (np.random.randint(5); x0
 x0.shape
 #1-Dim
 x1 = np.random.randint(10, size=6); x1
@@ -49,15 +49,15 @@ x2[1,-2]
 x2
 
 #alternate items
-x2[::, ::] #all
+x2[:, :] #all
 x2[::2, ::] #alternative rows
 x2[::, ::2] #alternative cols
-x2[:2, ::2] #alternative cols with first 3 rows
+x2[:3, ::2] #alternative cols with first 3 rows
 x2
 
 #3-Dim
 x3 = np.random.randint(10, size=(3,4,5)) ; x3
-x3  #all
+                      x3  #all
 x3[::] #all
 x3[1::] #2nd matrix onwards
 x3[::2]  #alternative matrix
